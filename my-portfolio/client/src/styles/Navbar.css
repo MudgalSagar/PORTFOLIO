@@ -1,0 +1,102 @@
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem; /* Increased padding */
+  background: #121212;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 70px;
+  transition: transform 0.3s ease-in-out; /* Explicit height to avoid content shifting */
+}
+.navbar.hide {
+  transform: translateY(-100%);
+}
+
+.navbar.show {
+  transform: translateY(0);
+}
+
+/* Add margin to push content down */
+body {
+  padding-top: 80px; /* Ensures content is not hidden under navbar */
+}
+
+/* Logo */
+.logo h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #61dafb;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  padding-right: 2rem; /* Add space from the right */
+}
+
+.nav-links li {
+  margin: 0 1.5rem; /* Increase spacing between items */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 12px;
+  transition: color 0.3s, background 0.3s;
+  border-radius: 5px;
+}
+
+.nav-links a:hover {
+  color: #61dafb;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Responsive - Mobile View */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px; /* Ensures menu opens below navbar */
+    right: 0;
+    width: 100%;
+    background: #121212;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+
+  .nav-links a {
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

@@ -1,0 +1,80 @@
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers content */
+  flex-wrap: wrap; /* Makes it responsive */
+  gap: 40px;
+  padding: 60px;
+  background: #1e1e2f;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin: 40px auto;
+  max-width: 80%;
+}
+
+/* Fix image alignment */
+.about-image img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #61dafb;
+  display: block;
+}
+
+/* Ensure text content takes space */
+.about-content {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+/* Ensure text width is reasonable */
+.about-content p {
+  font-size: 1.2rem;
+  color: #cccccc;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* Highlights alignment */
+.about-highlights {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap; /* Ensures responsiveness */
+  justify-content: center;
+}
+
+.highlight-card {
+  background: #61dafb;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(97, 218, 251, 0.3);
+  transition: transform 0.3s ease-in-out;
+  min-width: 160px; /* Prevents shrink */
+}
+
+.highlight-card:hover {
+  transform: scale(1.1);
+  background: #21a1f1;
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content p {
+    text-align: center;
+  }
+
+  .about-highlights {
+    justify-content: center;
+  }
+}
