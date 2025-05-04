@@ -17,7 +17,7 @@ const Home = () => {
       <section className="about">
         <div className="about-container">
           <div className="about-image">
-            <img src="your-profile-image.jpg" alt="Sagar Mudgal" />
+            <img src="/Sagarmudgal.jpeg" alt="Sagar Mudgal" />
           </div>
           <div className="about-content">
             <h2>About Me:</h2>

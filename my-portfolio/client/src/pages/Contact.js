@@ -1,77 +1,41 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/Contact.css";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const [status, setStatus] = useState("");
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await fetch("http://localhost:5000/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await response.json();
-
-      if (response.ok) {
-        setStatus("Message Sent Successfully!");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        setStatus(result.error || "Something went wrong!");
-      }
-    } catch (error) {
-      setStatus("Error sending message.");
-      console.error(error);
-    }
-  };
-
   return (
     <div>
       <section className="contact-section">
         <div className="contact-container">
           <h2>Contact Me</h2>
-          <p>
-            Let's collaborate! Feel free to reach out to hire or just to say hi.
-          </p>
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
+          <p>Let's collaborate! Feel free to reach out.</p>
 
+          {/* SIMPLIFIED FORM - NO BACKEND NEEDED */}
+          <form
+            action="https://formsubmit.co/sagarmiscs@gmail.com"
+            method="POST"
+            className="contact-form"
+          >
+            {/* Required FormSubmit fields */}
+            <input
+              type="hidden"
+              name="_subject"
+              value="New Portfolio Message"
+            />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+
+            {/* Your form fields */}
+            <input type="text" name="name" placeholder="Name" required />
             <input
               type="email"
               name="email"
               placeholder="Your Email"
-              value={formData.email}
-              onChange={handleChange}
               required
             />
-
             <textarea
               name="message"
               placeholder="Your Message"
               rows="5"
-              value={formData.message}
-              onChange={handleChange}
               required
             ></textarea>
 
@@ -79,7 +43,7 @@ const Contact = () => {
               Send Message
             </button>
           </form>
-          {status && <p className="status-message">{status}</p>} {}
+
           <div className="social-icons">
             <a
               href="https://www.linkedin.com/in/sagar-mudgal-217202300/"
