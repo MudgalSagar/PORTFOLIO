@@ -1,4 +1,4 @@
-# 🌐 Mudgal Sagar's Developer Portfolio
+# 🌐 MY PORTFOLIO
 
 Welcome to my personal portfolio website! This is a showcase of my work, skills, and projects as a Full-Stack Developer. Built with modern web technologies, the portfolio demonstrates my passion for clean code, responsive design, and user-friendly interfaces.
 
