@@ -1,4 +1,4 @@
-require("dotenv").config();
+/*require("dotenv").config();
 const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
@@ -114,4 +114,4 @@ app.listen(PORT, () => {
   console.log(
     `CORS allowed for: ${process.env.FRONTEND_URL || "http://localhost:3000"}`
   );
-});
+}); */
