@@ -9,7 +9,6 @@ const Contact = () => {
           <h2>Contact Me</h2>
           <p>Let's collaborate! Feel free to reach out.</p>
 
-          {/* SIMPLIFIED FORM - NO BACKEND NEEDED */}
           <form
             action="https://formsubmit.co/sagarmiscs@gmail.com"
             method="POST"
