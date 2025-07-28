@@ -18,6 +18,18 @@ const projects = [
     description: "A personal portfolio showcasing my skills and projects.",
     githubLink: "https://github.com/MudgalSagar",
   },
+  {
+    title: "NotLazy",
+    description:
+      "NotLazy is a simple and responsive To-Do List app built with the MERN stack (MongoDB, Express, React, Node.js)",
+    githubLink: "https://github.com/MudgalSagar/notLazy",
+  },
+  {
+    title: "TrainMate",
+    description:
+      "Train Mate is a web application designed to help users track, manage, and analyze their fitness journey",
+    githubLink: "https://github.com/MudgalSagar/TrainMate",
+  },
 ];
 
 const Projects = () => {

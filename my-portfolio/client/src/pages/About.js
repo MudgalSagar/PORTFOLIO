@@ -23,7 +23,9 @@ const About = () => {
             When I'm not coding, I enjoy{" "}
             <strong>exploring new tech, gaming, and event management</strong>.
           </p>
-          <button className="about-button">Download Resume</button>
+          <a href="/updatedresume.jpg" download>
+            <button className="about-button">Download Resume</button>
+          </a>
         </div>
 
         <div className="about-image-section">
